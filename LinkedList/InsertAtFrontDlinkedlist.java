@@ -36,18 +36,6 @@ public class InsertAtFrontDlinkedlist {
         newNode.next = null;
     }
 
-    Node reverse(Node head){
-        Node curr = head;
-        while(curr.next != null){
-            Node temp = curr.next;
-            curr.next = curr.prev;
-            curr.prev = temp;
-
-            curr = curr.prev;
-        }
-        return head;
-    }
-
     void display(){
         Node curr = head;
         while(curr != null){
@@ -61,11 +49,9 @@ public class InsertAtFrontDlinkedlist {
         in.InsertAtBeginning(10);
         in.InsertAtBeginning(70);
         in.InsertAtBeginning(50);
-        in.InsertAtBeginning(30);
         in.InsertAtEnd(1);
+        in.InsertAtBeginning(30);
         in.InsertAtBeginning(20);
-        in.display();
-        in.reverse(null);
         in.display();
     }
 }
